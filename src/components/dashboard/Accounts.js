@@ -110,9 +110,10 @@ let transactionsData = [];
  accountContent = (
       <div className="row">
         <div className="col s12">
+        <h1 className="bankTitle">Unite Bank</h1>
           <button
             onClick={this.onLogoutClick}
-            className="btn-flat waves-effect"
+            className="btn-flat waves-effect right"
           >
             <i className="material-icons left">keyboard_backspace</i> Log Out
           </button>

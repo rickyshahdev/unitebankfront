@@ -62,6 +62,7 @@ class Dashboard extends Component {
       dashboardContent = (
         <div className="row">
           <div className="col s12 center-align">
+          <h1 className="bankTitle">Unite Bank</h1>
             <h4>
               <b>Welcome,</b> {user.name.split(" ")[0]}
             </h4>

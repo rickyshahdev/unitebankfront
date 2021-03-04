@@ -15,6 +15,7 @@ render() {
       <div style={{ height: "75vh" }} className="container valign-wrapper">
         <div className="row">
           <div className="col s12 center-align">
+          <h1 className="bankTitle">Unite Bank</h1>
             <img
               src={credit_card}
               style={{ width: "350px" }}
