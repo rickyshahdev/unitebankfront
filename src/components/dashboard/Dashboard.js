@@ -21,7 +21,7 @@ class Dashboard extends Component {
     this.props.getAccounts();
 
     axios
-      .post("http://localhost:5000/api/plaid/api/create_link_token")
+      .post("https://unitebank.herokuapp.com/api/plaid/api/create_link_token")
       .then(this.setLinkToken)
       .catch(err => console.log(err));
   }

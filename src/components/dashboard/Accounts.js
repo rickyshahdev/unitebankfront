@@ -24,7 +24,7 @@ class Accounts extends Component {
     const { accounts } = this.props;
     this.props.getTransactions(accounts);
     axios
-      .post("http://localhost:5000/api/plaid/api/create_link_token")
+      .post("https://unitebank.herokuapp.com/api/plaid/api/create_link_token")
       .then(this.setLinkToken)
       .catch(err => console.log(err));
   }

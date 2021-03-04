@@ -13,7 +13,7 @@ import {
 export const addAccount = plaidData => async dispatch => {
   const accounts =  await plaidData.accounts;
   await axios
-    .post("/api/plaid/accounts/add", plaidData)
+    .post("https://unitebank.herokuapp.com/api/plaid/accounts/add", plaidData)
     .then(res =>
        dispatch({
         type: ADD_ACCOUNT,
@@ -34,7 +34,7 @@ export const deleteAccount = plaidData => dispatch => {
       account => account._id !== id
     );
     axios
-      .delete(`/api/plaid/accounts/${id}`)
+      .delete(`https://unitebank.herokuapp.com/api/plaid/accounts/${id}`)
       .then(res =>
         dispatch({
           type: DELETE_ACCOUNT,
@@ -50,7 +50,7 @@ export const deleteAccount = plaidData => dispatch => {
 export const getAccounts = () => async dispatch => {
   dispatch(setAccountsLoading());
   await axios
-    .get("/api/plaid/accounts")
+    .get("https://unitebank.herokuapp.com/api/plaid/accounts")
     .then(res =>
       dispatch({
         type: GET_ACCOUNTS,
@@ -74,7 +74,7 @@ export const setAccountsLoading = () => {
 export const getTransactions = plaidData => async dispatch => {
   dispatch(setTransactionsLoading());
   await axios
-    .post("/api/plaid/accounts/transactions", plaidData)
+    .post("https://unitebank.herokuapp.com/api/plaid/accounts/transactions", plaidData)
     .then(res =>
       dispatch({
         type: GET_TRANSACTIONS,
